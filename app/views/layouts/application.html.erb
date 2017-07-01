@@ -9,6 +9,21 @@
   </head>
 
   <body>
+    <header class="row">
+        <div class="col-3">
+            LOGO
+        </div>
+        <div class="col-4">
+            Regurgitating random tech advice since 2017. 
+        </div>
+        <div class="col-5">
+            <%= link_to 'Give us a tip!', '#' %>
+            <%= link_to 'About', '#' %>
+        </div>
+    </header>
+
+    <br class="clear" />
+
     <%= yield %>
   </body>
 </html>
