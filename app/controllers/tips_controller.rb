@@ -3,10 +3,6 @@ class TipsController < ApplicationController
       @tip = Tip.order("RANDOM()").first
     end
 
-    def new
-      @tip = Tip.new
-    end
-
     def create
       @tip = Tip.create(tip_params)
       if @tip.invalid?
