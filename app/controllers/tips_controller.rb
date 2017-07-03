@@ -8,7 +8,10 @@ class TipsController < ApplicationController
     end
 
     def create
-      Tip.create(tip_params)
+      @tip = Tip.create(tip_params)
+      if @tip.invalid?
+        flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
+      end
       redirect_to root_path
     end
 
