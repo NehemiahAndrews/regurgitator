@@ -22,11 +22,12 @@
               </div>
             <% end %>
         </div>
-        <div class="col-4 slogan">
+        <div class="col col-sm-4 hidden-xs-down slogan">
             Regurgitating random tech advice since 2017. 
         </div>
-        <div class="col-5 links">
+        <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
             <%= link_to 'Give us a tip!', '#', data: {toggle: 'modal', target: '#myModal'} %>
+            &nbsp;&nbsp;
             <%= link_to 'About', about_path %>
         </div>
     </header>
@@ -44,8 +45,9 @@
           </div>
           <%= simple_form_for Tip.new do |f| %>
             <div class="modal-body">
-              <%= f.input :advice %>
-              <%= f.input :author %>
+              <%= f.input :advice, label: "What advice to do you have?", placeholder: "Always check Google first." %>
+              <br />
+              <%= f.input :author, label: "What's your name?", placeholder: "NA" %>
               <br />
             </div>
           <div class="modal-footer">
@@ -74,10 +76,10 @@
     <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <%= link_to "Help! I need more!", root_path , class: "next-quote" %>
           </div>
-          <div class="col-6 footer-blurb">
+          <div class="col-12 col-sm-6 footer-blurb">
             Site built by Nehemiah Andrews, 2017.  <br />
             Content by miscellaneous IT Ninjas. 
           </div>
